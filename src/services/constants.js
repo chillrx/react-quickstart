@@ -2,4 +2,4 @@
 export const apiUrl = "";
 
 /** Default values for the global state */
-export const defaultGlobalState = {}
+export const defaultGlobalState = {};

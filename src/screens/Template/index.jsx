@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import { MainContainer, IntroductionText } from './styles';
+import { MainContainer } from "./styles";
+import TableList from "../../components/TableList";
 
-function Template() {
-    return (
-        <MainContainer>
-            <IntroductionText>
-                Testing
-            </IntroductionText>
-        </MainContainer>
-    );
-}
+const Template = () => {
+  return (
+    <MainContainer>
+      <TableList />
+    </MainContainer>
+  );
+};
 
 export default Template;
