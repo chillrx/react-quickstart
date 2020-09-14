@@ -12,20 +12,16 @@ export const AppBar = () => {
     <AppBarStyle position="static" color="default" elevation={0}>
       <ToolbarStyle>
         <ToolbarTitleStyle variant="h6" color="inherit" noWrap>
-          Vouchers
+          Westwing
         </ToolbarTitleStyle>
 
         <nav>
-          <LinkStyle variant="button" color="textPrimary" href="#">
-            Features
+          <LinkStyle variant="button" color="textPrimary" href="templates">
+            Templates
           </LinkStyle>
 
-          <LinkStyle variant="button" color="textPrimary" href="#">
-            Enterprise
-          </LinkStyle>
-
-          <LinkStyle variant="button" color="textPrimary" href="#">
-            Support
+          <LinkStyle variant="button" color="textPrimary" href="vouchers">
+            Vouchers
           </LinkStyle>
         </nav>
       </ToolbarStyle>

@@ -1,6 +1,6 @@
 import React, { StrictMode } from "react";
 import { render } from "react-dom";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { setGlobal } from "reactn";
 import { CssBaseline } from "@material-ui/core";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
@@ -9,19 +9,13 @@ import { Router, Redirect, Route, Switch } from "wouter";
 import AppBar from "./components/AppBar";
 import { defaultGlobalState } from "./services/constants";
 import Template from "./screens/Template";
+import Voucher from "./screens/Voucher";
 
 /**
  *  Base theme - material UI
  */
 const theme = createMuiTheme({
-  palette: {
-    primary: {
-      light: "#fff",
-      main: "#fff",
-      dark: "#121212",
-      contrastText: "#fff",
-    },
-  },
+  // Theme settings
 });
 
 // Setting default global state
@@ -41,8 +35,9 @@ const Main = () => {
 
           <Router>
             <Switch>
-              <Route path="/" component={Template} />
-              <Route path="/:rest*" component={() => <Redirect to={`/`} />} />
+              <Route path="/templates" component={Template} />
+              <Route path="/vouchers" component={Voucher} />
+              <Route path="/:rest*" component={() => <Redirect to={`/templates`} />} />
             </Switch>
           </Router>
         </ThemeProvider>
